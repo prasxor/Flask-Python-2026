@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>{% block title%}Document{%endblock%}</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: whitesmoke;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+        position: relative;
+        height: 100%;
+        width: 100%;
+      }
+
+      nav,
+      footer {
+        border: 1px solid red;
+        height: 70px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+      }
+
+      .list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 20px;
+        list-style-type: none;
+      }
+
+      footer {
+        position: relative;
+        bottom: 0;
+      }
+
+      .maincontent {
+        height: 80vh;
+        border: 1px solid blue;
+        width: 100%;
+      }
+    </style>
+    <nav>
+      <div class="logo">
+        <h1>Logo</h1>
+      </div>
+      <div class="list">
+        <ul>
+          <a href="/"><li>Home</li></a>
+          <a href="/about"><li>About</li></a>
+        </ul>
+      </div>
+    </nav>
+    <div class="maincontent">{%block content%} {%endblock%}</div>
+    <footer>
+      <div class="logo">
+        <h1>Logo</h1>
+      </div>
+      <p>copyright 2026</p>
+      <div class="list">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Template</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
