@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>{% block title%}Document{%endblock%}</title>
+  </head>
+  <body>
+    
+    <nav>
+      <div class="logo">
+        <h1>Logo</h1>
+      </div>
+      <div class="list">
+        <ul>
+          <a href="/"><li>Home</li></a>
+          <a href="/about"><li>About</li></a>
+        </ul>
+      </div>
+    </nav>
+    <div class="maincontent">{%block content%} {%endblock%}</div>
+    <footer>
+      <div class="logo">
+        <h1>Logo</h1>
+      </div>
+      <p>copyright 2026</p>
+      <div class="list">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Template</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

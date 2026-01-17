@@ -1,13 +1,13 @@
 from flask import Flask,render_template,request
 
 studentsData = {
-    "arjun": {
-        "password": "arjun@123",
+    "vishnu": {
+        "password": "teja@123",
         "is_topper": True,
         "subjects": ["Maths", "Physics", "Chemistry"]
     },
-    "neha": {
-        "password": "neha@456",
+    "saboor": {
+        "password": "abdul@456",
         "is_topper": False,
         "subjects": ["Biology", "Chemistry", "English"]
     },
