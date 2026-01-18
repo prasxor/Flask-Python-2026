@@ -3,30 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{%block title%} My feedback site{%endblock%}</title>
+    <title>{%block title%} Flask-WTD form{%endblock%}</title>
   </head>
   <body>
-    <header>
-      <h1>Website</h1>
-      <nav>
-        <a href="/">Home</a>
-      </nav>
-    </header>
-    {% with messages = get_flashed_messages()%} {%if messages%}
-    <ul style="color: green">
-      {%for msg in messages%}
-      <li>{{msg}}</li>
-      {%endfor%}
-    </ul>
-    {%endif%}
+    <h1>Flask-WTF Registration</h1>
+
+    {% with messages = get_flashed_messages(with_categories=True)%} 
+    {%if messages%} 
+    {%for category,msg in messages%} 
+    <p style="color: green;">{{msg}}</p>
+    {{msg}} 
+    {%endfor%} 
+    {%endif%} 
     {%endwith%}
+    {%block content%}
+    
+    {%endblock%}
 
-    {%block content%}{%endblock%}
-
-    <footer>
-        <p>
-            &copy;2026 website baba
-        </p>
-    </footer>
   </body>
 </html>
