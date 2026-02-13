@@ -10,7 +10,7 @@
     
     <nav>
       <div class="logo">
-        <h1>Logo</h1>
+        <h1>mySite</h1>
       </div>
       <div class="list">
         <ul>
@@ -19,6 +19,15 @@
         </ul>
       </div>
     </nav>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul style="color:green">
+      {% for msg in messages %}
+      <li>{{msg}}</li>
+      {% endfor %}
+    </ul>
+    {%endif%}
+    {%endwith%}
     <div class="maincontent">{%block content%} {%endblock%}</div>
     <footer>
       <div class="logo">
