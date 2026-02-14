@@ -1,0 +1,21 @@
+# Flask App Directory structure
+flask_app
+    run.py
+    app(folder)
+        __init__.py
+        routes
+            __init__.py
+            auth.py
+        models
+            __init__.py
+        templates
+            base.html
+            auth
+                login.html
+        static
+            css
+                style.css
+            js
+                script.js
+            images
+                hello.png
